@@ -95,6 +95,35 @@ $patch = (new \JacobDeKeizer\Ccv\Models\Apps\Apps\Patch())
 $client->apps()->update(12345, $patch);
 ```
 
+## Colors
+
+### Get all colors
+
+You can optionally filter by color (this can be a hex value or a name.)
+
+```php
+$colors = $client->colors()->all(
+    (new \JacobDeKeizer\Ccv\Parameters\Colors\All())
+        ->setColor('#c0c0c0')
+);
+```
+
+### Get color
+
+```php
+$color = $client->colors()->get(12345);
+```
+
+### Create color
+
+```php
+$client->colors()->create(
+    (new \JacobDeKeizer\Ccv\Models\Colors\Colors\Post())
+        ->setName('Silver')
+        ->setHex('#c0c0c0')
+);
+```
+
 ## Orders
 
 ### Get all orders with orderrows
@@ -702,6 +731,7 @@ $client->ordernotifications()->create(123, $ordernotification);
 | --- |
 | root |
 | apps |
+| colors |
 | orderrows |
 | orders |
 | products|
