@@ -32,6 +32,12 @@ class SchemaGenerator
         $generator->generate('/API/Schema/vnd.verto.webshop.resource.apps.v1.json', $namespace);
         $generator->generate('/API/Schema/internal.resource.apps.patch.v1.json', $namespace);
 
+        // colors
+        $namespace = 'Colors';
+        $generator->generate('/API/Schema/vnd.verto.webshop.resource.collection.colors.v1.json', $namespace);
+        $generator->generate('/API/Schema/vnd.verto.webshop.resource.colors.v1.json', $namespace);
+        $generator->generate('/API/Schema/internal.resource.colors.post.v1.json', $namespace);
+
         // orders
         $namespace = 'Orders';
         $generator->generate('/API/Schema/vnd.verto.webshop.resource.collection.orders.v1.json', $namespace);
