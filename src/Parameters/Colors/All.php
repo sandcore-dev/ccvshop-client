@@ -10,7 +10,7 @@ class All implements Parameter
 {
     use FromArray;
 
-    /** @var string */
+    /** @var string|null */
     private $color;
 
     /**
@@ -27,12 +27,12 @@ class All implements Parameter
             ->addOptionalParameter('color', $this->getColor());
     }
 
-    public function getColor(): string
+    public function getColor(): ?string
     {
         return $this->color;
     }
 
-    public function setColor(string $color): self
+    public function setColor(?string $color): self
     {
         $this->color = $color;
         return $this;
